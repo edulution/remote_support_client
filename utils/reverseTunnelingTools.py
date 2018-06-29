@@ -5,7 +5,7 @@ import signal
 
 def start_reverse_tunnel(formatted_host):
     try:		
-        subprocess.Popen('sshpass -p $SSHPASS /usr/bin/ssh -N -R ' + formatted_host, shell=True)
+        subprocess.Popen('sshpass -p $SSHPASS2 /usr/bin/ssh -N -R ' + formatted_host, shell=True)
 
     except Exception as e:
         print "Failed to create tunnel: {}".format(e)

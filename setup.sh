@@ -4,6 +4,9 @@
 echo "Installing dependencies. Please be patient"
 pip install requests
 
+
+grep -q -F 'export SSHPASS2=MountFuj1' ~/.bashrc || echo 'export SSHPASS2=MountFuj1' >> ~/.bashrc
+
 # Hardcoded integrity check to "ok" for first run
 database_path=~/.kalite/database/data.sqlite
 database_name=$(sqlite3 $database_path "SELECT d.name FROM securesync_device d JOIN securesync_devicemetadata s WHERE s.device_id = d.id AND s.is_own_device = 1")
