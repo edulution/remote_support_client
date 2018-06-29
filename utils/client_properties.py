@@ -1,3 +1,4 @@
+from random import randint
 # Properties file for remote support client
 
 
@@ -11,7 +12,7 @@ cert_file = "edulution.crt"
 enable_https = False  # ONLY set to True when running against an HTTPS server
 
 # reverse tunnel config
-reverse_tunnel_port = 19999
+reverse_tunnel_port = randint(10000,99999)
 reverse_tunnel_username = "kapsakala"
 reverse_tunnel_server = "35.229.55.248"
 
