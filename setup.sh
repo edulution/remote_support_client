@@ -2,6 +2,7 @@
 
 # Install python requests package
 echo "Installing dependencies. Please be patient"
+sudo apt-get install -y python-pip
 pip install requests
 
 
